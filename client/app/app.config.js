@@ -1,11 +1,9 @@
-'use strict';
-
 export function routeConfig($urlRouterProvider, $locationProvider, ChartJsProvider) {
-  'ngInject';
+  'ngInject'
 
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/login')
 
-  $locationProvider.html5Mode(true);
+  $locationProvider.html5Mode(true)
 
   Chart.defaults.global.colors = [
     "#21a55f",
