@@ -1,0 +1,17 @@
+.pledge {
+  margin: 20px;
+  color: #33b781;
+  text-align: center;
+}
+
+.pledge h1 {
+  font-size: 40px;
+}
+
+.pledge h2 {
+  font-size: 30px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.pledge h4 {
+  font-size: 20px;
+}
