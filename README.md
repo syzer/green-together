@@ -1,14 +1,5 @@
 # Green together
 
-1.  [ ] Pledge on signup
-1a. [ ] post on facebook
-2. App
-3. CO2 calculations
-4. mockup of google directions
-5. [ ] graphs for user
-6. [ ] graphs population of zurich
-7. picture of gogole maps
-
 This is an application to track and record historical CO2 usage by individuals. The first iteration of this project is
 designed for the city of Zürich to reduce the overall CO2 emissions generated automobiles traveling through the city.
 The objective is toget people to leave their cars at home and use public transportation or alternate means to get to
