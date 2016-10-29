@@ -52,10 +52,10 @@ export default class SettingsController {
   changeCar(car) {
     this.user.car = car
     // FUU
-    this.user.carMilesPerGallon = this.getRandomInt(20, 40).toFixed(0)
+    this.user.carMilesPerGallon = SettingsController.getRandomInt(20, 40).toFixed(0)
   }
 
-  getRandomInt(min, max) {
+  static getRandomInt(min, max) {
     min = Math.ceil(min)
     max = Math.floor(max)
     return Math.floor(Math.random() * (max - min)) + min
