@@ -32,6 +32,11 @@ export default class SettingsController {
     ]
   }
 
+  changeCity(city) {
+    console.log(city)
+    this.user.city = city;
+  }
+
   changePassword(form) {
     this.submitted = true;
 

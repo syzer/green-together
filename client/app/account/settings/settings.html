@@ -13,7 +13,9 @@
               {{ vm.errors.other }}
             </p>
           </div>
-
+          <pre>
+            {{vm.user.city}}
+          </pre>
           <div class="form-group">
 
             <div uib-dropdown on-toggle="toggled(open)">
@@ -23,7 +25,7 @@
               </button>
               <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
                 <li ng-repeat="city in vm.cities" ng-model="vm.user.city">
-                  <a href>{{city}}</a>
+                  <a href="#" ng-click="vm.changeCity(city)">{{city}}</a>
                 </li>
               </ul>
               <input type="text" name="city" class="form-control" ng-model="vm.user.city" mongoose-error/>
@@ -58,6 +60,7 @@
       </div>
     </div>
   </div>
+  <hr>
   <div class="row">
     <div class="col-sm-12">
       <h1>Change Password</h1>
