@@ -7,7 +7,7 @@
 }
 
 .bs-callout-warning {
-  border-left-color: #0ab828;
+  border-left-color: #0ab828!important;
 }
 
 .bs-callout {
