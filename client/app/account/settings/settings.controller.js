@@ -11,7 +11,9 @@ export default class SettingsController {
   user: User = {
     oldPassword: '',
     newPassword: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    address: '',
+    city: 'Zurich'
   };
   errors = {
     other: undefined
