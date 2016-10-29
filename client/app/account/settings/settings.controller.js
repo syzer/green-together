@@ -13,7 +13,8 @@ export default class SettingsController {
     newPassword: '',
     confirmPassword: '',
     address: '',
-    city: 'Zurich'
+    city: 'Zurich',
+    car: ''
   };
   errors = {
     other: undefined
@@ -25,22 +26,37 @@ export default class SettingsController {
   /*@ngInject*/
   constructor(Auth) {
     this.Auth = Auth;
-    this.cities =  [
+    this.cities = [
       'Basel',
       'Paris',
       'Zurich'
     ]
+
+    this.cars = [
+      'A3 Sportback e-tron®',
+      'A4 allroad®',
+      'Q3',
+      'Q5',
+      'Q5 hybrid',
+      'SQ5',
+      'Q7'
+    ]
   }
 
   changeCity(city) {
-    console.log(city)
-    this.user.city = city;
+    this.user.city = city
+  }
+
+  changeCar(car) {
+    this.user.car = car
+    // FUU
+    this.user.carMilesPerGallon = 25
   }
 
   changePassword(form) {
     this.submitted = true;
 
-    if(form.$valid) {
+    if (form.$valid) {
       this.Auth.changePassword(this.user.oldPassword, this.user.newPassword)
         .then(() => {
           this.message = 'Password successfully changed.';
