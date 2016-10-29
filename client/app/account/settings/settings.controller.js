@@ -14,7 +14,9 @@ export default class SettingsController {
     confirmPassword: '',
     address: '',
     city: 'Zurich',
-    car: ''
+    car: '',
+    carBrand: '',
+    carMilesPerGallon: ''
   };
   errors = {
     other: undefined
@@ -50,7 +52,13 @@ export default class SettingsController {
   changeCar(car) {
     this.user.car = car
     // FUU
-    this.user.carMilesPerGallon = 25
+    this.user.carMilesPerGallon = this.getRandomInt(20, 40).toFixed(0)
+  }
+
+  getRandomInt(min, max) {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min)) + min
   }
 
   changePassword(form) {

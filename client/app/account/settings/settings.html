@@ -66,12 +66,13 @@
       </div>
       <div class="col-sm-6">
 
-        <form class="form" name="car" ng-submit="vm.changeCar(car)" novalidate>
+        <!--ng-submit="vm.changeCar(car)"-->
+        <form class="form" name="car" novalidate>
 
           <div class="form-group">
             <label>Car brand</label>
 
-            <input type="text" name="carBrand" class="form-control" ng-model="vm.user.car.brand"
+            <input type="text" name="carBrand" class="form-control" ng-model="vm.user.carBrand"
                    placeholder="Audi"
                    mongoose-error/>
             <p class="help-block" ng-show="form.address.$error.mongoose">
