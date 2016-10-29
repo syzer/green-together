@@ -11,7 +11,6 @@
 
         <div class="form-group" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
                                             'has-error': form.name.$invalid && vm.submitted }">
-          <!--<label>Name</label>-->
 
           <input type="text" name="name" class="form-control" ng-model="vm.user.name"
                  required placeholder="Name"/>
@@ -22,7 +21,6 @@
 
         <div class="form-group" ng-class="{ 'has-success': form.email.$valid && vm.submitted,
                                             'has-error': form.email.$invalid && vm.submitted }">
-          <!--<label>Email</label>-->
 
           <input type="email" name="email" class="form-control" ng-model="vm.user.email"
                  required placeholder="Email"
@@ -40,7 +38,6 @@
 
         <div class="form-group" ng-class="{ 'has-success': form.password.$valid && vm.submitted,
                                             'has-error': form.password.$invalid && vm.submitted }">
-          <!--<label>Password</label>-->
 
           <input type="password" name="password" class="form-control" ng-model="vm.user.password"
                  ng-minlength="3"
@@ -58,7 +55,6 @@
 
         <div class="form-group" ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
                                             'has-error': form.confirmPassword.$invalid && vm.submitted }">
-          <!--<label>Confirm Password</label>-->
           <input type="password" name="confirmPassword" class="form-control" ng-model="vm.user.confirmPassword"
                  match="vm.user.password"
                  placeholder="Confirm Password"
