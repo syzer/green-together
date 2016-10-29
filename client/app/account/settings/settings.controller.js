@@ -25,6 +25,11 @@ export default class SettingsController {
   /*@ngInject*/
   constructor(Auth) {
     this.Auth = Auth;
+    this.cities =  [
+      'Basel',
+      'Paris',
+      'Zurich'
+    ]
   }
 
   changePassword(form) {
