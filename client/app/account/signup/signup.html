@@ -1,7 +1,6 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1>Sign up</h1>
       <p class="pledge">
         Herby i say that i will reduce my carbon footprint
         TODO
@@ -59,10 +58,10 @@
 
         <div class="form-group" ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
                                             'has-error': form.confirmPassword.$invalid && vm.submitted }">
-          <label>Confirm Password</label>
+          <!--<label>Confirm Password</label>-->
           <input type="password" name="confirmPassword" class="form-control" ng-model="vm.user.confirmPassword"
                  match="vm.user.password"
-                 placeholder=""
+                 placeholder="Confirm Password"
                  ng-minlength="3" required/>
           <p class="help-block"
              ng-show="form.confirmPassword.$error.match && vm.submitted">
