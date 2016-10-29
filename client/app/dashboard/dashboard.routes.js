@@ -8,6 +8,6 @@ export default function routes($stateProvider) {
     template: require('./dashboard.html'),
     controller: 'DashboardController',
     controllerAs: 'vm',
-    authenticate: 'user'
+    // authenticate: 'user'
   });
 }
