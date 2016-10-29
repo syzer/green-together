@@ -22,6 +22,9 @@ export default class DashboardController {
     ]
 
     this.options = {
+      legend: {
+        display: true
+      },
       scales: {
         yAxes: [
           {
@@ -42,7 +45,11 @@ export default class DashboardController {
 
     this.pieChartLabels = ['Car', 'Walk', 'Bike', 'Public treansportation']
     this.pieChartData = [300, 500, 100, 100]
-    this.pieCHartOptions = {}
+    this.pieChartOptions = {
+      legend: {
+        display: true
+      }
+    }
   }
 
   onClick(points, evt) {
