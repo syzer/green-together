@@ -1,4 +1,12 @@
-# 
+# Green together
+
+1. Pledge
+2. App
+3. CO2 calculations
+4. mockup of google directions
+5. [ ] graphs for user
+6. [ ] graphs population of zurich
+7. picture of gogole maps
 
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 4.1.0.
 
