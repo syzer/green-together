@@ -49,6 +49,17 @@
             </p>
           </div>
 
+          <div class="form-group">
+            <label>Age</label>
+
+            <input type="number" name="age" class="form-control" ng-model="vm.user.age"
+                   placeholder="18"
+                   mongoose-error/>
+            <p class="help-block" ng-show="form.address.$error.mongoose">
+              {{ vm.errors.other }}
+            </p>
+          </div>
+
           <p class="help-block"> {{ vm.message }} </p>
 
         </form>
