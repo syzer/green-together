@@ -87,6 +87,7 @@ function whenServerReady(cb) {
             serverReady = true;
             cb();
         }),
+      // lol :)
         100);
 }
 
