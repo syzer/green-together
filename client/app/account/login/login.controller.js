@@ -22,12 +22,12 @@ export default class LoginController {
 
   /*@ngInject*/
   constructor(Auth, $state) {
-    this.Auth = Auth;
-    this.$state = $state;
+    this.Auth = Auth
+    this.$state = $state
   }
 
   login(form) {
-    this.submitted = true;
+    this.submitted = true
 
     if(form.$valid) {
       this.Auth.login({
@@ -36,11 +36,11 @@ export default class LoginController {
       })
         .then(() => {
           // Logged in, redirect to home
-          this.$state.go('main');
+          this.$state.go('dashboard')
         })
         .catch(err => {
-          this.errors.login = err.message;
-        });
+          this.errors.login = err.message
+        })
     }
   }
 }
