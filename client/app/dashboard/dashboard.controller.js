@@ -2,6 +2,7 @@
 // @flow
 
 import chart from 'angular-chart.js'
+// import d3 from 'd3'
 
 export default class DashboardController {
   Auth;
@@ -41,9 +42,7 @@ export default class DashboardController {
 
     this.pieChartLabels = ['Car', 'Walk', 'Bike', 'Public treansportation']
     this.pieChartData = [300, 500, 100, 100]
-    this.pieCHartOptions = {
-    }
-
+    this.pieCHartOptions = {}
   }
 
   onClick(points, evt) {

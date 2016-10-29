@@ -43,7 +43,7 @@ User.find({}).remove()
   .then(() => {
     User.create({
       provider: 'local',
-      name: 'Test User',
+      name: 'David Perry',
       email: 'test@test.com',
       password: 'test'
     }, {
