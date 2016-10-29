@@ -11,7 +11,9 @@
     <div class="col-lg-12">
       <h1 class="page-header">Features:</h1>
       <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
-        <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="$ctrl.deleteThing(thing)">&times;</button></a></li>
+        <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}
+          <button type="button" class="close" ng-click="$ctrl.deleteThing(thing)">&times;</button>
+        </a></li>
       </ul>
     </div>
   </div>
@@ -26,3 +28,38 @@
     </p>
   </form>
 </div>
+
+<p><button onclick="geoFindMe()">Show my location</button></p>
+<div id="out"></div>
+
+<script>
+  function geoFindMe() {
+    var output = document.getElementById("out");
+
+    if (!navigator.geolocation) {
+      output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+      return;
+    }
+
+    function success(position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+
+      output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+
+      var img = new Image();
+      img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+
+      output.appendChild(img);
+    };
+
+    function error() {
+      output.innerHTML = "Unable to retrieve your location";
+    };
+
+    output.innerHTML = "<p>Locating…</p>";
+
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+</script>
+
