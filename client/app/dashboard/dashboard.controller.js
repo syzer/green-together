@@ -1,50 +1,49 @@
 'use strict';
 // @flow
 
+import * as chart from 'angular-chart.js'
 
 export default class DashboardController {
-  user: User = {
-    oldPassword: '',
-    newPassword: '',
-    confirmPassword: '',
-    address: '',
-    city: 'Zurich'
-  };
-  errors = {
-    other: undefined
-  };
-  message = '';
-  submitted = false;
   Auth;
+  labels;
+  series;
+  data;
+  options;
 
   /*@ngInject*/
   constructor(Auth) {
     this.Auth = Auth;
-    this.cities =  [
-      'Basel',
-      'Paris',
-      'Zurich'
-    ]
-  }
+    this.labels = ["January", "February", "March", "April", "May", "June", "July"];
+    this.series = ['Series A', 'Series B'];
+    this.data = [
+      [65, 59, 80, 81, 56, 55, 40],
+      [28, 48, 40, 19, 86, 27, 90]
+    ];
 
-  changeCity(city) {
-    console.log(city)
-    this.user.city = city;
-  }
-
-  changePassword(form) {
-    this.submitted = true;
-
-    if(form.$valid) {
-      this.Auth.changePassword(this.user.oldPassword, this.user.newPassword)
-        .then(() => {
-          this.message = 'Password successfully changed.';
-        })
-        .catch(() => {
-          form.password.$setValidity('mongoose', false);
-          this.errors.other = 'Incorrect password';
-          this.message = '';
-        });
+    this.options = {
+      scales: {
+        yAxes: [
+          {
+            id: 'y-axis-1',
+            type: 'linear',
+            display: true,
+            position: 'left'
+          },
+          {
+            id: 'y-axis-2',
+            type: 'linear',
+            display: true,
+            position: 'right'
+          }
+        ]
+      }
     }
   }
+
+  onClick(points, evt) {
+    console.log(points, evt)
+  }
+
+  datasetOverride = [{yAxisID: 'y-axis-1'}, {yAxisID: 'y-axis-2'}]
+
 }
