@@ -10,3 +10,10 @@ Additionally, the application will allow the user to compare their results with 
 overall progress of the city in reduciing its emissions. The application allows the user through social media to post their
 CO2 reductions and to challenge others to take the pledge. By this method, the pledge is propagated and social media
 pressure is employed to get more people to sign up for reducing their emissions.
+
+# Install
+
+```
+npm install
+npm start
+```
