@@ -1,25 +1,26 @@
-<script src="node_modules/chart.js/Chart.min.js"></script>
-<script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+<!--<script src="node_modules/chart.js/Chart.min.js"></script>-->
+<!--<script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>-->
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
       <div class="col-sm-6">
         <h1>Your carbon emission</h1>
         <canvas id="line" class="chart chart-line" chart-data="vm.data"
-                chart-labels="labels" chart-series="series" chart-options="vm.options"
+                chart-labels="vm.labels" chart-series="vm.series" chart-options="vm.options"
                 chart-dataset-override="vm.datasetOverride" chart-click="vm.onClick"
         </canvas>
       </div>
       <div class="col-sm-6">
         <h1>Rewards</h1>
-        <div class="rewards badge">
+        <div class="col-sm-3 rewards">
           <img height="100" src="/assets/images/co2in.png" alt="dogecoin">
+          <img height="100" src="/assets/images/doge-coin-2.jpg" alt="cumulus points">
+        </div>
+        <div class="col-sm-3 rewards">
           <img height="100" src="/assets/images/cumulus-points.jpg" alt="cumulus points">
           <img height="100" src="/assets/images/cumulus-points.jpg" alt="cumulus points">
-
         </div>
       </div>
     </div>
   </div>
-  <h1>AWSEOME DASBOARD WILL HAPPEN HERE</h1>
 </div>

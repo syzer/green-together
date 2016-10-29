@@ -1,14 +1,14 @@
 'use strict';
 /*eslint-env node*/
-var webpack = require('webpack');
-var autoprefixer = require('autoprefixer');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
-var fs = require('fs');
-var path = require('path');
-var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
+var webpack = require('webpack')
+var autoprefixer = require('autoprefixer')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin
+var fs = require('fs')
+var path = require('path')
+var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin
 
 module.exports = function makeWebpackConfig(options) {
     /**
@@ -51,7 +51,9 @@ module.exports = function makeWebpackConfig(options) {
                 'angular-socket-io',
                 'angular-ui-bootstrap',
                 'angular-ui-router',
-                'lodash'
+                'lodash',
+                'chart.js',
+                'angular-chart.js',
             ]
         };
     }

@@ -1,7 +1,7 @@
 'use strict';
 // @flow
 
-import * as chart from 'angular-chart.js'
+import chart from 'angular-chart.js'
 
 export default class DashboardController {
   Auth;
@@ -11,9 +11,9 @@ export default class DashboardController {
   options;
 
   /*@ngInject*/
-  constructor(Auth) {
-    this.Auth = Auth;
-    this.labels = ["January", "February", "March", "April", "May", "June", "July"];
+  constructor(Auth/*, chart*/) {
+    this.Auth = Auth
+    this.labels = ['January', 'February', "March", "April", "May", "June", "July"];
     this.series = ['Series A', 'Series B'];
     this.data = [
       [65, 59, 80, 81, 56, 55, 40],

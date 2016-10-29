@@ -7,7 +7,7 @@ export default function routes($stateProvider) {
     url: '/dashboard',
     template: require('./dashboard.html'),
     controller: 'DashboardController',
-    controllerAs: 'dashboard',
+    controllerAs: 'vm',
     authenticate: 'user'
   });
 }
