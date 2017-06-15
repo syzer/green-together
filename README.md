@@ -1,5 +1,7 @@
 # Green together
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/syzer/green-together.svg)](https://greenkeeper.io/)
+
 This is an application to track and record historical CO2 usage by individuals. The first iteration of this project is
 designed for the city of Zürich to reduce the overall CO2 emissions generated automobiles traveling through the city.
 The objective is to get people to leave their cars at home and use public transportation or alternate means to get to
